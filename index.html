@@ -104,8 +104,8 @@
 
         // Copy text to clipboard using Clipboard API
         copyBtn.addEventListener("click", function() {
-            const colorText = "color=\"" + colorHex.textContent + "\"";
-            
+            const colorText = "https://colorimages.xyz/image?w=200&h=200&hex=" + colorHex.textContent;
+
             // Use the Clipboard API
             navigator.clipboard.writeText(colorText).then(function() {
                 alert("Text copied to clipboard: " + colorText);
