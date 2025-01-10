@@ -1,9 +1,11 @@
 const express = require('express');
 const {createCanvas} = require('canvas');
 const path = require('path');
+var cors = require('cors')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(cors())
 
 // Serve the landing page
 app.get('/', (req, res) => {
