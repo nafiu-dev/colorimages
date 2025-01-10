@@ -50,7 +50,7 @@
                     <section class="p-4 border rounded ">
                         <div class="color-picker-container">
                             <div class="text-box border rounded p-2" id="text-box "> 
-                                https://colorimages.xyz/image?w=200&h=200&hex="<span id="color-hex">#000000</span>"
+                                https://colorimages.xyz/image?w=200&h=200&hex=<span id="color-hex">000000</span>
                             </div>
                             <input type="color" id="color-picker" value="#000000" class="form-control mx-3" style="width: 50px;">
                             <button id="copy-btn" class="btn btn-primary">
@@ -99,7 +99,7 @@
         // Update the color and hex when color is picked
         colorPicker.addEventListener("input", function() {
             const selectedColor = colorPicker.value;
-            colorHex.textContent = selectedColor;
+            colorHex.textContent = selectedColor.substring(1);
         });
 
         // Copy text to clipboard using Clipboard API
