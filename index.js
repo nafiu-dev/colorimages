@@ -49,7 +49,7 @@ app.get('/image', (req, res) => {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
 
     // Send the image as a response
-    canvas.pngStream().pipe(res);
+    return canvas.pngStream().pipe(res);
 });
 
 // Start the server
